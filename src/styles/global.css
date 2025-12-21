@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html {
-  background-color: #f1f5f9;
+  background-color: #c4ddf6;
+  color: rgb(0, 4, 44);
   font-family: sans-serif;
 }
 
@@ -20,6 +29,23 @@ h1 {
   font-size: 2.5rem;
 }
 
+.hamburger {
+    margin-top: 0rem;
+    padding-right: 20px;
+    cursor: pointer;
+    /* background-color: #ff9776; */
+}
+
+.hamburger .line{
+    display: block;
+    width: 40px;
+    height: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+
 /* ナビゲーションのスタイル */
 
 .nav-links {
@@ -28,22 +54,52 @@ h1 {
   left: 48px;
   background-color: #ff9776;
   display: none;
-  margin: 0;
+  margin: 0 5rem;
 }
 
 .nav-links a {
+  position: relative;
   display: block;
+  color: black;
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
+  font-family: "Oswald";
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.nav-links a::before {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto auto 1em;
+  background-color: black;
+}
+
+.nav-links a::after {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 1em auto auto;
+  background-color: black;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: #aab4fd;
 }
 
 .expanded {
@@ -64,4 +120,9 @@ h1 {
     padding: 15px 20px;
   }
 
+  .nav-links a::before,
+  .nav-links a::after,
+  .hamburger {
+    display: none;
+  }
 }
