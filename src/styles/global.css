@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: "Oswald";
   src: url("../assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
@@ -27,6 +29,7 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .hamburger {
@@ -45,6 +48,52 @@ h1 {
     background-color: #ffffff;
 }
 
+.work {
+  display: block;
+  margin-top: 3rem;
+}
+
+.work .work-titles {
+  position: relative;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.work .work-titles .work-title {
+  font-family: "Oswald";
+  font-size: 2.5rem;
+  margin-left: 0.3rem;
+}
+
+.work .work-titles .work-date {
+  padding-top: 1.7rem;
+  padding-left: 1rem;
+  font-family: "Oswald";
+  font-size: 1.2em;
+}
+
+.work .work-titles::after {
+  position: absolute;
+  content: "";
+  width: 22rem;
+  height: 3px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(10, 26, 57);
+  border-radius: 2px;
+}
+
+.work .work-image {
+  width: 60%;
+  height: 60%;
+}
+
+.work .work-image :hover,
+.work .work-image :focus {
+  opacity: 90%;
+}
 
 /* ナビゲーションのスタイル */
 
@@ -77,9 +126,9 @@ h1 {
   width: 35%;
   height: 3px;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   margin: auto auto auto 1em;
   background-color: black;
 }

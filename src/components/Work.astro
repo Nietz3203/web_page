@@ -1,0 +1,13 @@
+---
+const { title, image, date, pageurl } = Astro.props;
+---
+
+<div class="work">
+    <div class="work-titles">
+        <h3 class="work-title">{title}</h3>
+        <p class="work-date">{date}</p>
+    </div>
+    <a href={pageurl} class="work-image">
+        <img src={image} alt={title}/>
+    </a>
+</div>
