@@ -2,14 +2,11 @@
 import Social from "../components/Social.astro"
 ---
 
-<style>
-    footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-</style>
-
 <footer>
     <Social platform="x" username="l09n64OGSZ27774" />
+    <!-- <a href="#top" class="pageTopButton">TOP</a> -->
+    <button id="topButton" class="pageTopButton"><span>TOP</span></button>
 </footer>
+<script>
+    import "../scripts/ReturnToTopButton"
+</script>

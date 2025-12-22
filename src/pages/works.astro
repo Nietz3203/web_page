@@ -3,13 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Work from "../components/Work.astro";
 
 import DummyImage from "../assets/dummyimage.png"
-import AstroImage from "../assets/astro.svg"
+import AstroImage from "../assets/dummyimage.png"
 
 const pageTitle = "Works";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h2>My Works</h2>
+  <hr class="border-t-3 mb-4">
+    <p>These are my works in my whole life.</p>
+    <p>Some of these are uncompleted...</p>
+    <p>Don't expect too much.</p>
     <div>
       <Work
         title="Dummy"
