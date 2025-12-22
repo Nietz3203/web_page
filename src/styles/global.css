@@ -300,6 +300,22 @@ p {
   display: unset;
 }
 
+@media (max-width: 720px) {
+  .work .drop-cap-text {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .work .work-titles .work-title {
+  font-family: "Oswald";
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  }
+}
+
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
