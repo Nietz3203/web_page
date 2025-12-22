@@ -1,27 +1,14 @@
 ---
-import '../styles/global.css'
-import Navigation from "../components/Navigation.astro"
-import Hamburger from "../components/Hamburger.astro"
-import Footer from "../components/Footer.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
 
 const pageTitle = "About"
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-    <Hamburger />
-    <h1>About</h1>
-    <Footer />
-    <script>
-      import "../scripts/menu.js"
-    </script>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <p class="drop-cap-text">
+        <span class="first-letter">H</span>
+        ello! I'm Nietz, and I make games as a hobby. As of this moment (December 22, 2025), I am a freshman in college, and I first encountered Unity after entering university. I basically use Unity for development and haven't tried Godot or UE yet...
+        (I don't even know when I'll ever get around to trying it)</p>
+    <p>Well, for now...</p>
+    <p>As long as I don't die, it's fine, right?</p>
+</BaseLayout>

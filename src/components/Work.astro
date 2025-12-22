@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets"
-const { title, image, date, pageurl } = Astro.props;
+const { title, image, date, pageurl, descFL, desc } = Astro.props;
 ---
 
 <div class="work">
@@ -8,7 +8,13 @@ const { title, image, date, pageurl } = Astro.props;
         <h3 class="work-title">{title}</h3>
         <p class="work-date">{date}</p>
     </div>
-    <a href={pageurl} class="work-image">
-        <Image src={image} alt={title}/>
-    </a>
+    <div class="flex">
+        <a href={pageurl} class="work-image">
+            <Image src={image} alt={title}/>
+        </a>
+        <p class="drop-cap-text w-80">
+            <span class="first-letter">{descFL}</span>
+            {desc}
+        </p>
+    </div>
 </div>

@@ -6,25 +6,32 @@ import DummyImage from "../assets/dummyimage.png"
 import AstroImage from "../assets/dummyimage.png"
 
 const pageTitle = "Works";
+const descShotingOverItFL = "T"
+const descShotingOverIt =
+    "his game is my first work which upload to UnityRoom. \
+    Click to shot, WASD to moving. \
+    Very simple... but also very frustratable. \
+    As you expected, inspired by \"Getting Over It\"."
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <hr class="border-t-3 mb-4">
-    <p>These are my works in my whole life.</p>
-    <p>Some of these are uncompleted...</p>
-    <p>Don't expect too much.</p>
-    <div>
-      <Work
-        title="Dummy"
-        image={DummyImage}
-        date="2025-12-22"
-        pageurl="/workspage/dummy/"
-      />
-      <Work
-        title="Dummy"
-        image={AstroImage}
-        date="2025-12-22"
-        pageurl="/workspage/dummy/"
-      />
-    </div>
+  <p>These are my works in my whole life.</p>
+  <p>Some of these are uncompleted...</p>
+  <p>Don't expect too much.</p>
+  <div>
+    <Work
+      title="Shooting Over It"
+      image={DummyImage}
+      date="2025-5-15"
+      pageurl="https://unityroom.com/games/shootingoverit"
+      descFL={descShotingOverItFL}
+      desc={descShotingOverIt}
+    />
+    <Work
+      title="Dummy"
+      image={AstroImage}
+      date="2025-12-22"
+      pageurl="/workspage/dummy/"
+    />
+  </div>
 </BaseLayout>

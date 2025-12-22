@@ -1,8 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-const pageTitle = "Home Page"
+import LargeNavigation from "../components/LargeNavigation.astro"
+const pageTitle = "Home"
+const captionAbout = "Self introduce roughly.\n As README!"
+const captionWorks = "My whole works!\n Most of them made by Unity."
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>私の素晴らしいブログのサブタイトル</h2>
+  <div class="band-area">
+    <p>(^^)</p>
+  </div>
+  <h2>Welcome to my website!</h2>
+  <p>This page started in 2025-12-22.</p>
+  <!-- <hr class="border-1 border-indigo-900 rounded-full"> -->
+  <div class="block content-center">
+    <div class="block">
+      <LargeNavigation head="About" caption={captionAbout}/>
+      <LargeNavigation head="Works" caption={captionWorks}/>
+    </div>
+  </div>
 </BaseLayout>
