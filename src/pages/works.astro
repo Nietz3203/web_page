@@ -2,16 +2,36 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Work from "../components/Work.astro";
 
-import DummyImage from "../assets/dummyimage.png"
-import AstroImage from "../assets/dummyimage.png"
+import SOIImage from "../assets/images/ShootingOverIt.png"
+import M3PImage from "../assets/images/Matching3Puzzle.png"
+import MImage from "../assets/images/M.png"
+import AstroImage from "../assets/images/dummyimage.png"
 
 const pageTitle = "Works";
-const descShotingOverItFL = "T"
-const descShotingOverIt =
+
+const desc_FL_SOI = "T"
+const desc_SOI =
     "his game is my first work which upload to UnityRoom. \
     Click to shot, WASD to moving. \
     Very simple... but also very frustratable. \
     As you expected, inspired by \"Getting Over It\"."
+
+const desc_FL_M3P = "S"
+const desc_M3P =
+    "o-called \"practice work\". (Not that it's anything fancy.) \
+    I researched how to make games in Unity through videos \
+    and created this by imitating what I saw. \
+    Since I was still getting used to Unity at the time, \
+    even this alone felt revolutionary to me."
+
+const desc_FL_M = "A"
+const desc_M =
+    "s I created my work, I gradually gained knowledge, \
+    and this piece was made with the goal of creating something \
+    playable to a certain degree. \
+    Honestly, it's playable, but it's not fun... \
+    I got lazy with the UI partway through, so it's pretty rough around the edges. \
+    Looking at it now, I think, “Man, I was really trying back then.”"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -21,11 +41,27 @@ const descShotingOverIt =
   <div>
     <Work
       title="Shooting Over It"
-      image={DummyImage}
+      image={SOIImage}
       date="2025-5-15"
       pageurl="https://unityroom.com/games/shootingoverit"
-      descFL={descShotingOverItFL}
-      desc={descShotingOverIt}
+      descFL={desc_FL_SOI}
+      desc={desc_SOI}
+    />
+    <Work
+      title="Matching 3 Puzzle"
+      image={M3PImage}
+      date="2025-5-25"
+      pageurl="https://unityroom.com/games/m3p"
+      descFL={desc_FL_M3P}
+      desc={desc_M3P}
+    />
+    <Work
+      title="M."
+      image={MImage}
+      date="2025-8-28"
+      pageurl="https://unityroom.com/games/m-game"
+      descFL={desc_FL_M}
+      desc={desc_M}
     />
     <Work
       title="Dummy"

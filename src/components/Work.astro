@@ -10,7 +10,7 @@ const { title, image, date, pageurl, descFL, desc } = Astro.props;
     </div>
     <div class="flex">
         <a href={pageurl} class="work-image">
-            <Image src={image} alt={title}/>
+            <Image class="w-80" src={image} alt={title}/>
         </a>
         <p class="drop-cap-text w-80">
             <span class="first-letter">{descFL}</span>
