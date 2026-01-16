@@ -195,7 +195,8 @@ p {
 }
 
 .work .work-titles .work-date {
-  padding-top: 1.7rem;
+  margin-top: auto;
+  margin-bottom: 0.2rem;
   padding-left: 1rem;
   font-family: "Oswald";
   font-size: 1.2em;

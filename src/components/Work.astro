@@ -1,6 +1,12 @@
 ---
 import { Image } from "astro:assets"
-const { title, image, date, pageurl, descFL, desc } = Astro.props;
+const { title, image, date, pageurl } = Astro.props;
+
+const html = await Astro.slots.render('default');
+
+const plainText = html.replace(/<[^>]*>?/gm, '').trim();
+const firstLeter = plainText.charAt(0);
+const remainingText = plainText.slice(1);
 ---
 
 <div class="work">
@@ -13,8 +19,8 @@ const { title, image, date, pageurl, descFL, desc } = Astro.props;
             <Image class="w-80" src={image} alt={title}/>
         </a>
         <p class="drop-cap-text w-80">
-            <span class="first-letter">{descFL}</span>
-            {desc}
+            <span class="first-letter">{firstLeter}</span>
+            {remainingText}
         </p>
     </div>
 </div>
