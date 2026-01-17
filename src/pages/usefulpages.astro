@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import PageLink from "../components/PageLink.astro"
+
+import GoogleFontsImage from "/src/assets/images/google-fonts.jpg"
+import UncutImage from "/src/assets/images/uncut.png"
+import OldpcImage from "/src/assets/images/oldpc-font.png"
+import PixabayImage from "/src/assets/images/pixabay.png"
+import IwashiroImage from "/src/assets/images/iwashiro.png"
+import PigmentImage from "/src/assets/images/pigment.png"
+
+const pageTitle = "Useful Pages"
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1 class="pagesCategory">FONTS</h1>
+    <div class="flex flex-wrap">
+        <PageLink pagename="Google fonts" pageimage={GoogleFontsImage} pageurl="https://fonts.google.com/"/>
+        <PageLink pagename="Uncut" pageimage={UncutImage} pageurl="https://uncut.wtf/"/>
+        <PageLink pagename="Oldschool PC" pageimage={OldpcImage} pageurl="https://int10h.org/oldschool-pc-fonts/"/>
+    </div>
+    <h1 class="pagesCategory">AUDIO</h1>
+    <div class="flex flex-wrap">
+        <PageLink pagename="Pixabay" pageimage={PixabayImage} pageurl="https://pixabay.com/ja/"/>
+        <PageLink pagename="Iwashiro-Sounds" pageimage={IwashiroImage} pageurl="https://iwashiro-sounds.work/"/>
+    </div>
+    <h1 class="pagesCategory">COLORS</h1>
+    <div class="flex flex-wrap">
+        <PageLink pagename="Pigment" pageimage={PigmentImage} pageurl="https://pigment.shapefactory.co/"/>
+    </div>
+</BaseLayout>

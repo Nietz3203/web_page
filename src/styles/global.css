@@ -269,7 +269,7 @@ p {
 .nav-links a::before {
   position: absolute;
   content: "";
-  width: 35%;
+  width: 25%;
   height: 3px;
   top: 0;
   right: 0;
@@ -282,7 +282,7 @@ p {
 .nav-links a::after {
   position: absolute;
   content: "";
-  width: 35%;
+  width: 25%;
   height: 3px;
   top: 0;
   left: 0;
@@ -299,6 +299,45 @@ p {
 
 .expanded {
   display: unset;
+}
+
+.pagesCategory {
+  margin-top: 10rem;
+  font-family: "Oswald";
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.usefulpage {
+  background-color: rgba(48, 147, 190, 0.2);
+  width: 18rem;
+  margin-top: 3rem;
+  margin-right: 2rem;
+  transition: 0.5s;
+}
+
+.usefulpage:hover {
+  opacity: 80%;
+}
+
+.usefulpage .name {
+  padding-left: 0.5rem;
+  padding-top: 0.1rem;
+  font-size: 1.2rem;
+}
+
+.usefulpage .name::after {
+  content: ">>";
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+  margin-left: 1.3rem;
+  transition: 0.2s;
+}
+
+.usefulpage:hover .name::after {
+  opacity: 1;
+  margin-left: 2rem;
 }
 
 @media (max-width: 720px) {

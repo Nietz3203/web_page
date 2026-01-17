@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets"
+const { pagename, pageimage, pageurl } = Astro.props;
+---
+
+<div class="usefulpage">
+    <a href={pageurl}>
+        <Image class="w-100%" src={pageimage} alt="dummy"/>
+    </a>
+    <div>
+        <p class="name">{pagename}</p>
+    </div>
+</div>
